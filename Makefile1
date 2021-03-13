@@ -1,0 +1,17 @@
+LIBS =
+OBJ = map.o io.o my_string.o counter.o
+EXE = word_counter
+CXXFLAGS += -Wall -g
+
+all: $(EXE)
+
+$(EXE) : $(OBJ)
+	$(CXX) -o $@ $^ $(LIBS)
+
+clean:
+	$(RM) $(OBJ) $(EXE)
+
+depend:
+	$(CXX) -MM $(OBJ:.o=.c) >.depend
+
+-include .depend
