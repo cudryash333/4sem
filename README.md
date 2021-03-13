@@ -1,1 +1,1 @@
-This program reads from file and counts words in it. 
+This program reads from file and counts frequency of words in it. 
